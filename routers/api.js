@@ -294,7 +294,7 @@ router.post('/imgUpload',function(req,res){
 
 //轮播图保存
 router.post('/swiper/add',function (req,res) {
-  console.log(req.body);
+  //console.log(req.body);
   //验证
   if (req.body.title == '') {
     resData.userInfo = req.userInfo;
