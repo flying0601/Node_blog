@@ -1,0 +1,101 @@
+/* transform */
+@font-face { font-family: 'simSun'; src: url("../fonts/simsun.ttf") format("truetype"); }
+
+@media (min-width: 1367px) { .login-main { height: 100%; position: relative; }
+  .login-main .login-main-logo { display: inline-block; width: 60%; }
+  .login-main .login-main-logo h1 { margin: 3% 0 0 3%; width: 248px; height: 122px; background: url("../images/login/login_logo.png"); background-size: 100% 100%; }
+  .login-main .login-maindesc { display: inline-block; width: 55%; }
+  .login-main .login-maindesc h1 { display: inline-block; width: 148px; height: 432px; background: url("../images/login/login_desc.png"); background-size: 100% 100%; }
+  .login-main .login-maindesc .login-maindesc_txt { position: relative; margin: 17% 0 0 5%; vertical-align: top; display: inline-block; font-family: simSun; font-size: 26px; font-weight: 600; line-height: 1.4; color: #fff; text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.8); }
+  .login-main .login-maindesc .login-maindesc_txt .maindesc_txt1 { position: absolute; white-space: nowrap; animation: slidinp1 .2s ease-out; }
+  .login-main .login-maindesc .login-maindesc_txt .maindesc_txt2 { position: absolute; top: 50px; white-space: nowrap; animation: slidinp2 .2s ease-out; }
+  .login-main .login-maindesc .login-maindesc_txt .maindesc_txt3 { position: absolute; top: 100px; white-space: nowrap; animation: slidinp3 .5s ease-out; }
+  .login-main .login-maindesc .login-maindesc_txt .maindesc_txt4 { position: absolute; top: 150px; white-space: nowrap; animation: slidinp4 .6s ease-out; }
+  .login-main .login-maininput { min-width: 384px; max-width: 540px; position: absolute; top: 0; right: 4%; height: 100%; width: 28%; padding: 1%; background: rgba(255, 255, 255, 0.9); }
+  .login-main .login-maininput .input__field::-webkit-input-placeholder { color: #fff; font-size: 16px; }
+  .login-main .login-maininput .login-maininput_btn { cursor: pointer; font-size: 16px; }
+  .login-main .login-maininput .login-maininput_btn .btn__icon { position: relative; }
+  .login-main .login-maininput .login-maininput_btn .btn__tips { padding: 4px 12px 4px 6px; position: absolute; top: 4px; right: 46px; background: url("../images/login/nborder.png") no-repeat; background-size: 100% 100%; color: rgba(59, 153, 255, 0.8); }
+  .login-main .login-maininput .login-maininput_btn:hover .btn__icon { position: relative; }
+  .login-main .login-maininput .login-maininput_btn:hover .phones { height: 60px; width: 48px; background-position: 0 -60px; }
+  .login-main .login-maininput .login-maininput_btn:hover .users { height: 60px; width: 48px; background-position: 0 -180px; }
+  .login-main .login-maininput .login-maininput_btn:hover .btn__tips { padding: 4px 12px 4px 6px; position: absolute; top: 4px; right: 46px; background: url("../images/login/hborder.png") no-repeat; background-size: 100% 100%; color: #3B99FF; }
+  .login-main .login-maininput .login-maininput_title { margin-top: 20%; margin-bottom: 10%; font-size: 38px; color: #3B99FF; font-weight: 550; }
+  .login-main .login-maininput .container .phone_area { display: none; }
+  .login-main .login-maininput .container .sub_title { color: #333; font-size: 28px; font-weight: normal; }
+  .login-main .login-maininput .container .sub_title .title-line { margin: 4px auto; width: 3.4em; height: 2px; background: #3B99FF; }
+  .login-main .login-maininput .container .login__erro { font-size: 14px; color: #E23D47; margin: 2% 0 3%; }
+  .login-main .login-maininput .container .login__erro .erro_icon { margin: 0 6px 0 0; display: inline-block; vertical-align: middle; width: 14px; height: 14px; background: url("../images/login/login_erro.png") no-repeat; background-size: 100% 100%; }
+  .login-main .login-maininput .container .login__erro .erro-txt { display: inline-block; vertical-align: middle; }
+  .login-main .login-maininput .container .hidden { visibility: hidden; }
+  .login-main .login-maininput .container .login__code-warp { width: calc(100% - 164px); }
+  .login-main .login-maininput .container .input__field--yoko { color: #fff; }
+  .login-main .login-maininput .container .login_ycode { height: 48px; width: 132px; margin: -49px -132px 0 0; }
+  .login-main .login-maininput .container .phone_code { border: 0; color: #fff; background: #3B99FF; cursor: pointer; }
+  .login-main .login-maininput .container .login_button { background: #3B99FF; margin-top: 42px; border: 0; outline: none; height: 52px; line-height: 32px; font-size: 20px; color: #fff; width: 100%; margin-left: -12px; box-shadow: 0px 0px 0px 0px rgba(51, 51, 51, 0.3); border-radius: 4px; }
+  .login-main .login-maininput .copyr { position: absolute; bottom: 6%; margin: 0 auto; width: 100%; text-align: center; font-size: 14px; font-family: SourceHanSansCN-Normal; color: #333; line-height: 24px; } }
+
+@media (max-width: 1366px) { .login-main { height: 100%; position: relative; }
+  .login-main .login-main-logo { display: inline-block; width: 60%; }
+  .login-main .login-main-logo h1 { margin: 3% 0 0 3%; width: 248px; height: 122px; background: url("../images/login/login_logo.png") no-repeat; background-size: 100% 100%; }
+  .login-main .login-maindesc { display: inline-block; width: 55%; }
+  .login-main .login-maindesc h1 { display: inline-block; width: 106px; height: 288px; background: url("../images/login/login_desc.png") no-repeat; background-size: 100% 100%; }
+  .login-main .login-maindesc .login-maindesc_txt { margin: 15% 0 0 5%; vertical-align: top; display: inline-block; font-family: simSun; font-size: 20px; font-weight: 600; line-height: 1.4; color: #fff; text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.8); }
+  .login-main .login-maininput { min-width: 384px; max-width: 540px; position: absolute; top: 0; right: 4%; height: 100%; width: 28%; padding: 1%; background: rgba(255, 255, 255, 0.9); }
+  .login-main .login-maininput .input__field::-webkit-input-placeholder { color: #fff; font-size: 14px; }
+  .login-main .login-maininput .login-maininput_btn { cursor: pointer; font-size: 16px; }
+  .login-main .login-maininput .login-maininput_btn .btn__icon { position: relative; }
+  .login-main .login-maininput .login-maininput_btn .btn__tips { padding: 4px 12px 4px 6px; position: absolute; top: 4px; right: 46px; background: url("../images/login/nborder.png") no-repeat; background-size: 100% 100%; color: rgba(59, 153, 255, 0.8); }
+  .login-main .login-maininput .login-maininput_btn:hover .btn__icon { position: relative; }
+  .login-main .login-maininput .login-maininput_btn:hover .phones { height: 60px; width: 48px; background-position: 0 -60px; }
+  .login-main .login-maininput .login-maininput_btn:hover .users { height: 60px; width: 48px; background-position: 0 -180px; }
+  .login-main .login-maininput .login-maininput_btn:hover .btn__tips { padding: 4px 12px 4px 6px; position: absolute; top: 4px; right: 46px; background: url("../images/login/hborder.png") no-repeat; background-size: 100% 100%; color: #3B99FF; }
+  .login-main .login-maininput .login-maininput_title { margin-top: 6%; margin-bottom: 6%; font-size: 34px; color: #3B99FF; font-weight: 550; }
+  .login-main .login-maininput .container .phone_area { display: none; }
+  .login-main .login-maininput .container .sub_title { color: #333; font-size: 24px; font-weight: normal; }
+  .login-main .login-maininput .container .sub_title .title-line { margin: 4px auto; width: 3.4em; height: 2px; background: #3B99FF; }
+  .login-main .login-maininput .container .login__erro { font-size: 14px; color: #E23D47; margin: 2% 0 3%; }
+  .login-main .login-maininput .container .login__erro .erro_icon { margin: 0 6px 0 0; display: inline-block; vertical-align: middle; width: 14px; height: 14px; background: url("../images/login/login_erro.png") no-repeat; background-size: 100% 100%; }
+  .login-main .login-maininput .container .login__erro .erro-txt { display: inline-block; vertical-align: middle; }
+  .login-main .login-maininput .container .hidden { visibility: hidden; }
+  .login-main .login-maininput .container .login__code-warp { width: calc(100% - 136px); }
+  .login-main .login-maininput .container .input__field--yoko { color: #fff; }
+  .login-main .login-maininput .container .login_ycode { height: 38px; width: 104px; margin: -39px -104px 0 0; }
+  .login-main .login-maininput .container .phone_code { border: 0; color: #fff; background: #3B99FF; cursor: pointer; font-size: 14px; }
+  .login-main .login-maininput .container .login_button { background: #3B99FF; margin-top: 40px; border: 0; outline: none; height: 46px; font-size: 16px; color: #fff; width: 100%; margin-left: -12px; box-shadow: 0px 0px 0px 0px rgba(51, 51, 51, 0.3); border-radius: 4px; }
+  .login-main .login-maininput .copyr { position: absolute; bottom: 4%; margin: 0 auto; width: 100%; text-align: center; font-size: 12px; font-family: SourceHanSansCN-Normal; color: #333; line-height: 24px; } }
+
+@media (max-height: 610px) { .copyr { display: none; } }
+
+@keyframes fadeout { from { opacity: 1; }
+  to { opacity: 0; } }
+
+@keyframes fadein { from { opacity: 0; }
+  to { opacity: 1; } }
+
+@keyframes slidinp1 { from { top: 50px; }
+  to { top: 0px; } }
+
+@keyframes slidoutp1 { from { top: 0px; }
+  to { top: 50px; } }
+
+@keyframes slidinp2 { from { top: 100px; }
+  to { top: 50px; } }
+
+@keyframes slidoutp2 { from { top: 50px; }
+  to { top: 100px; } }
+
+@keyframes slidinp3 { from { top: 150px; }
+  to { top: 100px; } }
+
+@keyframes slidoutp3 { from { top: 100px; }
+  to { top: 150px; } }
+
+@keyframes fadeout { from { opacity: 1; }
+  to { opacity: 0; } }
+
+@keyframes slidinp4 { from { top: 250px; }
+  to { top: 150px; } }
+
+@keyframes slidoutp4 { from { top: 150px; }
+  to { top: 250px; } }

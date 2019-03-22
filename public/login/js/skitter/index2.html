@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>带38种动画过渡效果的炫酷jQuery幻灯片插件|DEMO2_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link href="css/skitter.styles.css" type="text/css" media="all" rel="stylesheet" />
+	<style type="text/css">
+		#page { margin: 0 auto; width: 600px; background: #fff;  margin-top: 20px; margin-bottom: 20px; border: 1px solid #777; box-shadow: #999 1px 1px 3px; }
+	</style>
+</head>
+<body>
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>带38种动画过渡效果的炫酷jQuery幻灯片插件 <span>A jQuery plugin - Skitter Slideshow</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-htmleaf-home-outline" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/201508192441.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+			<div class="htmleaf-demo center">
+			  <a href="index.html">Default</a>
+			  <a href="index2.html" class="current">Minimalist</a>
+			  <a href="index3.html">Round</a>
+			  <a href="index4.html">Clean</a>
+			  <a href="index5.html">Square</a>
+			</div>
+		</header>
+		<div id="page">
+			<div id="content">
+		      <div class="border_box">
+		        <div class="box_skitter box_skitter_large">
+		          <ul>
+		            <li><a href="#cube"><img src="images/example/001.jpg" class="circles" /></a><div class="label_text"><p>cube</p></div></li>
+		            <li><a href="#cubeRandom"><img src="images/example/002.jpg" class="circlesInside" /></a><div class="label_text"><p>cubeRandom</p></div></li>
+		            <li><a href="#block"><img src="images/example/003.jpg" class="circlesRotate" /></a><div class="label_text"><p>block</p></div></li>
+		            <li><a href="#cubeStop"><img src="images/example/004.jpg" class="cubeShow" /></a><div class="label_text"><p>cubeStop</p></div></li> 
+		          </ul>
+		        </div>
+		      </div>
+		    </div>
+	    </div>
+		<div class="related">
+		    <h3>如果你喜欢这个插件，那么你可能也喜欢:</h3>
+		    <a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/201508152415.html">
+			  <img src="related/1.jpg" width="300" alt="FlexSlider|功能强大的响应式jQuery幻灯片插件"/>
+			  <h3>FlexSlider|功能强大的响应式jQuery幻灯片插件</h3>
+			</a>
+			<a href="http://www.htmleaf.com/jQuery/Slideshow-Scroller/201508052361.html">
+			  <img src="related/2.jpg" width="300" alt="支持多种动画特效的响应式jQuery幻灯片插件"/>
+			  <h3>支持多种动画特效的响应式jQuery幻灯片插件</h3>
+			</a>
+		</div>
+	</div>
+	
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  	<script type="text/javascript" src="js/jquery.skitter.min.js"></script>
+  	<script type="text/javascript">
+	    $(document).ready(function() {
+			$('.box_skitter_large').skitter({
+				theme: 'minimalist',
+				dots: true, 
+				preview: true,
+				numbers_align: 'center'
+			});
+		});
+	</script>
+</body>
+</html>

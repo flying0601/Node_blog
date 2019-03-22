@@ -1,0 +1,202 @@
+@import "_variable";
+
+@media (min-width: 1367px) {
+
+    .i-main_middle {
+      // width: calc(100% - 370px);
+      // height: calc(100% - 246px);
+      font-size: 0;
+      width: 1550px;
+      height: 692px;
+      @include VHcenter;
+
+      .i-main-middle_item {
+        display: inline-block;
+        vertical-align: top;
+        height: 100%;
+
+        .tourism {
+          .dlt-icon {
+            margin: 4% 0 1.8%;
+          }
+        }
+
+        .apps {
+          .imgs {
+            top: 50%;
+            width: 50%;
+          }
+
+          .dlt-icon {
+            margin: 34% 0 26%;
+          }
+        }
+
+        .gifs {
+          background: url('../images/index/03slogan.png') no-repeat;
+          background-size: 100% 100%;
+        }
+
+        .citys {
+          .imgs {
+            top: 44%;
+            left: 54%;
+            width: 86%;
+          }
+
+          .desc {
+            bottom: 2.68%;
+          }
+
+          .dlt-icon {
+            margin: 26% 0 20%
+          }
+        }
+
+        .one-public {
+          .imgs {
+            top: 55%;
+            width: 78%;
+          }
+
+          .datashare {
+            .dlt-icon {
+              margin: 60% 0 48%;
+            }
+          }
+
+          .playconmm {
+            .dlt-icon {
+              margin: 18% 0 7%;
+            }
+          }
+        }
+
+        .e-commerce {
+          .dlt-icon {
+            margin: 20% 0 7%;
+          }
+        }
+
+        .traffic {
+          .imgs {
+            width: 62%;
+          }
+
+          .dlt-icon {
+            margin: 46% 0 27%;
+          }
+        }
+
+        .farming {
+          .imgs {
+            width: 64%;
+          }
+
+          .dlt-icon {
+            margin: 34% 0 20%;
+          }
+        }
+      }
+    }
+}
+
+@media (max-width: 1366px) {
+
+    .i-main_middle {
+      font-size: 0;
+      width: 1130px;
+      height: 496px;
+      @include VHcenter2;
+
+      .i-main-middle_item {
+        display: inline-block;
+        vertical-align: top;
+        height: 100%;
+
+        .tourism {
+          .dlt-icon {
+            margin: -2% 0 -6%;
+          }
+        }
+
+        .apps {
+          .imgs {
+            top: 50%;
+            width: 50%;
+          }
+
+          .dlt-icon {
+            margin: 30% 0 18%;
+          }
+        }
+
+        .gifs {
+          background: url('../images/index/03slogan.png') no-repeat;
+          background-size: 100% 100%;
+        }
+
+        .citys {
+          .imgs {
+            top: 44%;
+            left: 54%;
+            width: 86%;
+          }
+
+          .desc {
+            bottom: 2.68%;
+          }
+
+          .dlt-icon {
+            margin: 22% 0 8%;
+          }
+        }
+
+        .one-public {
+          .imgs {
+            top: 55%;
+            width: 78%;
+          }
+
+          .datashare {
+            .dlt-icon {
+              margin: 58% 0 32%;
+            }
+          }
+
+          .playconmm {
+            .dlt-icon {
+              margin: 12% 0 1.2%;
+            }
+          }
+        }
+
+        .e-commerce {
+          .dlt-icon {
+            margin: 13% 0 1.4%;
+          }
+        }
+
+        .traffic {
+          .imgs {
+            width: 62%;
+          }
+
+          .dlt-icon {
+            margin: 40% 0 12%;
+          }
+        }
+
+        .farming {
+          .imgs {
+            width: 64%;
+          }
+
+          .dlt-icon {
+            margin: 30% 0 8%;
+          }
+        }
+      }
+    }
+
+}

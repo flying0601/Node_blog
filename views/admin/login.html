@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>公共应用一级平台</title>
+  <!-- 插件css -->
+  <!-- 轮播 -->
+  <link rel="stylesheet" href="/public/login/js/skitter/css/normalize.css" />
+  <link rel="stylesheet" href="/public/login/js/skitter/css/default.css">
+  <link rel="stylesheet" href="/public/login/js/skitter/css/skitter.styles.css" media="all" />
+  <!-- input -->
+  <link rel="stylesheet" href="/public/login/js/input_plug/component.css">
+  <!-- 公共 -->
+  <link rel="stylesheet" href="/public/login/css/login_piug.css">
+  <!-- 自定义css -->
+  <link rel="stylesheet" href="/public/login/css/login.css">
+</head>
+
+<body>
+  <!-- 背景轮播start -->
+  <div id="page0" class="bg-swiper" style="display:block;">
+    <div id="content" class="content">
+      <div class="border_box">
+        <div class="box_skitter box_skitter_large">
+          <ul>
+            <li>
+              <a href="#cube">
+                <img src="/public/login/images/login/bg00.jpg" class="circles" style="width: 100%;" />
+              </a>
+              <div class="label_text">
+                <p>cube</p>
+              </div>
+            </li>
+            <li>
+              <a href="#cubeRandom">
+                <img src="/public/login/images/login/bg01.jpg" class="circlesInside" />
+              </a>
+              <div class="label_text">
+                <p>cubeRandom</p>
+              </div>
+            </li>
+            <li>
+              <a href="#block">
+                <img src="/public/login/images/login/bg02.jpg" class="circlesRotate" />
+              </a>
+              <div class="label_text">
+                <p>block</p>
+              </div>
+            </li>
+            <li>
+              <a href="#cubeStop">
+                <img src="/public/login/images/login/bg03.jpg" class="cubeShow" />
+              </a>
+              <div class="label_text">
+                <p>cubeStffodp</p>
+              </div>
+            </li>
+            <li>
+              <a href="#cubeRandom">
+                <img src="/public/login/images/login/bg04.jpg" class="circlesInside" />
+              </a>
+              <div class="label_text">
+                <p>cubeRandom</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 背景轮播end -->
+  <div class="login-main">
+    <div class="login-main-logo">
+      <h1></h1>
+    </div>
+    <div class="login-maindesc tc">
+      <h1></h1>
+      <div class="login-maindesc_txt tl">
+        <p class="maindesc_txt1">世界文化遗产地</p>
+        <p class="maindesc_txt2">国家森林公园</p>
+        <p class="maindesc_txt3">中国名茶之乡</p>
+        <p class="maindesc_txt4">中国民间玉雕艺术之乡</p>
+      </div>
+    </div>
+    <div class="login-maininput">
+      <div class="relatives h100">
+        <div class="tab">
+          <div class="login-maininput_btn tr on">
+            <div class="btn__icon lsprite users"></div>
+            <div class="btn__tips">账号登录</div>
+          </div>
+          <div class="login-maininput_btn tr">
+            <div class="btn__icon lsprite phones"></div>
+            <div class="btn__tips">手机登录</div>
+          </div>
+        </div>
+        <div class="login-maininput_title tc">公共应用一级平台</div>
+        <div class="container relatives">
+          <section class="user_area pl22 absolutes" >
+            <div class="tc sub_title tc">
+              账号登录
+              <div class="title-line"></div>
+            </div>
+            <div class="login__erro tc hidden"><i class="erro_icon"></i><span class="erro-txt">验证码错误！</span></div>
+            <div class="input input--minoru">
+              <input class="input__field input__field--yoko" type="text" placeholder="请输入账号" id="input-user" />
+              <label class="input__label input__label--yoko" for="input-user">
+                <span class="input__label-content input__label-content--yoko">请输入账号</span>
+              </label>
+            </div>
+            <div class="input input--minoru">
+              <input class="input__field input__field--yoko" type="text" placeholder="请输入密码" id="input-possword" />
+              <label class="input__label input__label--yoko" for="input-possword">
+                <span class="input__label-content input__label-content--yoko">请输入密码</span>
+              </label>
+            </div>
+            <div class="input input--minoru login__code-warp clearfix">
+              <input class="input__field input__field--yoko" type="text" placeholder="请输入验证码" id="input-ycode" maxlength="10" />
+              <label class="input__label input__label--yoko" for="input-ycode">
+                <span class="input__label-content input__label-content--yoko ">请输入验证码
+                </span>
+              </label>
+              <!-- 图片验证码start -->
+              <!-- <img src="/public/login/images/login/code.png" alt="" class="login_ycode fr"> -->
+              <img src="api/captcha" class="login_ycode fr" onclick="{$(event.target).attr('src','api/captcha?'+ Math.random())}">
+              <!-- 图片验证码end -->
+            </div>
+            <div class="remember_pwd">
+              <input type="checkbox" class="checkbox hidden" name="rememberMe" id="pwd">
+              <label for="pwd" class="blue_checkbox">记住用户名和密码</label>
+            </div>
+            <input type="button" class="login_button user-login" value="登录">
+          </section>
+          <section class="phone_area pl22 absolutes">
+            <div class="tc sub_title tc">
+              手机登录
+              <div class="title-line"></div>
+            </div>
+            <div class="login__erro tc hidden"><i class="erro_icon"></i><span class="erro-txt">验证码错误！</span></div>
+            <div class="input input--minoru">
+              <input class="input__field input__field--yoko" type="text" placeholder="请输入手机号" id="input-phone" />
+              <label class="input__label input__label--yoko" for="input-phone">
+                <span class="input__label-content input__label-content--yoko">请输入手机号</span>
+              </label>
+            </div>
+            <div class="input input--minoru login__code-warp clearfix">
+              <input class="input__field input__field--yoko" type="text" placeholder="请输入验证码" id="input-msgcode" maxlength="10" />
+              <label class="input__label input__label--yoko" for="input-msgcode">
+                <span class="input__label-content input__label-content--yoko ">请输入验证码
+                </span>
+              </label>
+              <input type="button" value="获取验证码" alt="" class="phone_code login_ycode fr">
+            </div>
+            <div class="remember_pwd">
+              <input type="checkbox" class="checkbox hidden" name="rememberMe" id="phones" checked>
+              <label for="phones" class="blue_checkbox">记住手机号</label>
+            </div>
+            <input type="button" class="login_button phone-login" value="登录">
+          </section>
+        </div>
+        <div class="copyr">Copyright© All Rights Reserved. Power By 动否科技</div>
+      </div>
+    </div>
+  </div>
+</body>
+<!-- 公共js -->
+<script src="/public/login/js/jquery.min.js"></script>
+<script type="text/javascript" src="/public/login/js/jquery.placeholder.min.js"></script>
+<!-- 插件js -->
+<!-- 轮播 -->
+<script type="text/javascript" src="/public/login/js/skitter/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="/public/login/js/skitter/js/jquery.skitter.min.js"></script>
+<!-- opacity -->
+<script src="/public/login/js/opacity/jquery.SuperSlide.js"></script>
+<!-- input -->
+<script type="text/javascript" src="/public/login/js/input_plug/classie.js"></script>
+<!-- 自定义js -->
+<script src="/public/login/js/login.js"></script>
+</html>

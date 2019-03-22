@@ -1,0 +1,68 @@
+//height、line-height
+@mixin hLh($num) {
+    height: $num;
+    line-height: $num;
+}
+
+// 水平垂直居中
+@mixin VHcenter() {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+// 水平垂直居中
+@mixin VHcenter2() {
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+// 省略号
+@mixin ellipsisNum($ellipsisNum) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $ellipsisNum;
+    -webkit-box-orient: vertical;
+    word-break: break-all
+}
+
+// 垂直渐变色
+@mixin gradientUpToBottom($colorUp, $colorBottom) {
+    background: -webkit-linear-gradient($colorUp, $colorBottom);
+    background: -o-linear-gradient($colorUp, $colorBottom);
+    background: -moz-linear-gradient($colorUp, $colorBottom);
+    background: linear-gradient($colorUp, $colorBottom);
+}
+
+// 水平渐变色
+@mixin gradientUpLeftRight($colorLeft, $colorRight) {
+    background: -webkit-linear-gradient(left, $colorLeft, $colorRight);
+    background: -o-linear-gradient(right, $colorLeft, $colorRight);
+    background: -moz-linear-gradient(right, $colorLeft, $colorRight);
+    background: linear-gradient(to right, $colorLeft, $colorRight);
+}
+
+/* transform */
+@mixin transformFn($effect) {
+    -webkit-transform: $effect;
+    -moz-transform: $effect;
+    -o-transform: $effect;
+    -ms-transform: $effect;
+    transform: $effect;
+}
+
+@font-face {
+    font-family: 'simSun';
+    src: url('../fonts/simsun.ttf') format('truetype'),
+}
+
+// 透明度
+@mixin opacity($degree) {
+    filter: alpha(opacity=$degree);
+    -moz-opacity: $degree / 100;
+    opacity: $degree / 100;
+}
+

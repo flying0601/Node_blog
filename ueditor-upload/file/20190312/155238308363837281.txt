@@ -1,0 +1,7 @@
+cnpm i crypto qs  //post请求
+live-server       //服务
+nginx -s reload   //重启Nginx
+
+192.168.0.109
+192.168.1.125
+asdf@1234

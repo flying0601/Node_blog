@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Flying个人博客 — 一个站在WEB前端开发之路上的草根程序员个人博客网站</title>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="keywords" content="个人博客,Flying个人博客,个人博客系统,老王博客,Flying">
+    <meta name="description" content="Flying博客系统，一个站在Web前端开发之路上的草根程序员个人博客网站。">
+    <LINK rel="Bookmark" href="favicon.ico">
+    <LINK rel="Shortcut Icon" href="favicon.ico" />
+    <!--[if lt IE 9]>
+<script type="text/javascript" src="/staticRes/js/html5shiv.js"></script>
+<script type="text/javascript" src="/staticRes/js/respond.min.js"></script>
+<![endif]-->
+    <link rel="stylesheet" type="text/css" href="/public/index/plugin/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/public/index/plugin/Hui-iconfont/1.0.8/iconfont.min.css" />
+    <link rel="stylesheet" type="text/css" href="/public/index/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="/public/index/plugin/pifu/pifu.css" />
+    <!--[if lt IE 9]>
+<link href="/staticRes/lib/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+    <script type="application/x-javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+        function showSide() {
+            $('.navbar-nav').toggle();
+        }
+    </script>
+</head>
+
+<body>
+    <header class="navbar-wrapper">
+        <div class="navbar navbar-fixed-top">
+            <div class="container cl">
+                <a class="navbar-logo hidden-xs" href="index.html">
+                    <img class="logo" id="bloglogo" src="/public/index/img/logoflying.png" alt="Flying's Blog" />
+                </a>
+                <a class="logo navbar-logo-m visible-xs" id="blogtitle" href="/">Flying's Blog</a>
+                <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:void(0);" onclick="showSide();">&#xe667;</a>
+                <nav class="nav navbar-nav nav-collapse w_menu" role="navigation">
+                    <ul class="cl">
+                        {% if category == '' || category == 'index' %}
+                        <li><a href="/?index=1" data-hover="首页" class="focus">首页</a></li>
+                        {% else %}
+                        <li><a href="/?index=2" data-hover="首页">首页</a></li>
+                        {% endif %}
+                        {% for cate in categories %}
+                        {% if category == cate.id %}
+                        <li> <a href="/?category={{cate.id}}" data-hover="{{cate.name}}" class="focus">{{cate.name}}</a>
+                        </li>
+                        {% else %}
+                        <li> <a href="/?category={{cate.id}}" data-hover="{{cate.name}}">{{cate.name}}</a> </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </nav>
+                <nav class="navbar-nav navbar-userbar hidden-xs hidden-sm " style="top: 0;">
+                    <ul class="cl">
+                        <li class="userInfo dropDown dropDown_hover">
+                            <!--<a href="javascript:;" ><img class="avatar radius" src="img/40.jpg" alt="丶似浅 "></a>
+                            <ul class="dropDown-menu menu radius box-shadow">
+                                <li><a href="/app/loginOut">退出</a></li>
+                            </ul>-->
+                            <a href="/app/qq" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})"><img class="avatar size-S"
+                                    src="/public/index/img/qq.jpg" title="登入">登入</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- <nav class="breadcrumb">
+    <div class="container"> <i class="Hui-iconfont">&#xe67f;</i> <a href="index.html" class="c-primary">首页</a> <span class="c-gray en">&gt;</span>  <span class="c-gray">文章</span> <span class="c-gray en">&gt;</span>  <span class="c-gray">个人博客应该选择什么样的域名和域名后缀</span></div>
+  </nav> -->
+
+    <section class="container pt-20">
+        <!--<div class="Huialert Huialert-info"><i class="Hui-iconfont">&#xe6a6;</i>成功状态提示</div>-->
+        <!--left-->
+        {% block content %}{% endblock %}
+        <!--left-->
+
+        <!--right-->
+        <div class="col-sm-3 col-md-3">
+
+            <!--站点声明-->
+            <div class="panel panel-default mb-20" style="height:49px;overflow: hidden;">
+                <div class="panel-body" >
+                    <i class="Hui-iconfont" style="float: left;">&#xe62f;&nbsp;</i>
+                    <div class="slideTxtBox">
+                        <div class="bd">
+                            <ul id="noticelist">
+                                <li><a href="javascript:void(0);">Lao博客测试版上线，欢迎访问</a></li>
+                                <li><a href="javascript:void(0);">内容如有侵犯，请立即联系管理员删除</a></li>
+                                <li><a href="javascript:void(0);">本站内容仅供学习和参阅，不做任何商业用途</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--博主信息-->
+            <div class="bg-fff box-shadow radius mb-20">
+                <div class="tab-category">
+                    <a href=""><strong>博主信息</strong></a>
+                </div>
+                <div class="tab-category-item">
+                    <ul class="index_recd">
+                        <li class="index_recd_item"><i class="Hui-iconfont">&#xe653;</i><span>姓名：<span id="blgoname">Flying</span></span></li>
+                        <li class="index_recd_item"><i class="Hui-iconfont">&#xe70d;</i><span>职业：<span id="occupation">JavaWeb开发</span></span></li>
+                        <li class="index_recd_item" id="email"><i class="Hui-iconfont">&#xe63b;</i><span>邮箱：</span></li>
+                        <li class="index_recd_item"><i class="Hui-iconfont">&#xe671;</i><span>定位：<span id="localtion"></span></span></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!--热门推荐-->
+            <div class="bg-fff box-shadow radius mb-20">
+                <div class="tab-category">
+                    <a href=""><strong>热门推荐</strong></a>
+                </div>
+                <div class="tab-category-item min-h215">
+                    <ul class="index_recd" id="hotlist">
+                        <!-- <li>
+                            <a href="/view?contentid={{hotList.id}}&category={{contents.cate}}">{{hotList.title}}</a>
+                            <p class="hits"><i class="Hui-iconfont" title="点击量">&#xe622;</i> {{hotList.commentsNum}}</p>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+
+            <!--点击排行-->
+            <div class="bg-fff box-shadow radius mb-20">
+                <div class="tab-category">
+                    <a href=""><strong>点击排行</strong></a>
+                </div>
+                <div class="tab-category-item min-h215">
+                    <ul class="index_recd clickTop" id="dotlist">
+                        <!-- <li>
+                            <a href="#">AJAX的刷新和前进后退问题解决</a>
+                            <p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276° </p>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+
+            <!--标签-->
+            <div class="bg-fff box-shadow radius mb-20">
+                <div class="tab-category">
+                    <a href=""><strong>标签云</strong></a>
+                </div>
+                <div class="tab-category-item">
+                    <div class="tags" id="yunlist">
+                        <a href="http://www.h-ui.net/">H-ui前端框架</a>
+                        <a href="http://www.h-ui.net/websafecolors.shtml">Web安全色</a>
+                        <a href="http://www.h-ui.net/Hui-4.4-Unslider.shtml">jQuery轮播插件</a>
+                        <a href="http://idc.likejianzhan.com/vhost/korea_hosting.php">韩国云虚拟主机</a>
+                        <a href="http://www.h-ui.net/bug.shtml">IEbug</a>
+                        <a href="http://www.h-ui.net/site.shtml">IT网址导航</a>
+                        <a href="http://www.h-ui.net/icon/index.shtml">网站常用小图标</a>
+                        <a href="http://www.h-ui.net/tools/jsformat.shtml">web工具箱</a>
+                        <a href="http://www.h-ui.net/bg/index.shtml">网站常用背景素材</a>
+                        <a href="http://www.h-ui.net/yuedu/chm.shtml">H-ui阅读</a>
+                        <a href="http://www.h-ui.net/easydialog-v2.0/index.html">弹出层插件</a>
+                        <a href="http://www.h-ui.net/SuperSlide2.1/demo.html">SuperSlide插件</a>
+                        <a href="http://www.h-ui.net/TouchSlide1.1/demo.html">TouchSlide</a>
+                    </div>
+                </div>
+            </div>
+            <!--图片-->
+            <div class="bg-fff box-shadow radius mb-20">
+                <div class="tab-category">
+                    <a href=""><strong>扫我关注</strong></a>
+                </div>
+                <div class="tab-category-item">
+                    <img id="concernpath"  data-original="/public/index/temp/gg.jpg" class="img-responsive lazyload" alt="响应式图片">
+                </div>
+            </div>
+
+            <!--友情链接-->
+            <div class="bg-fff box-shadow radius mb-20">
+                <div class="tab-category">
+                    <a href=""><strong>隔壁邻居</strong></a>
+                </div>
+                <div class="tab-category-item" id="youlink">
+                    <span><i class="Hui-iconfont">&#xe6f1;</i><a href="#" class="btn-link">百度</a></span>
+                    <span><i class="Hui-iconfont">&#xe6f1;</i><a href="#" class="btn-link">淘宝</a></span>
+                    <span><i class="Hui-iconfont">&#xe6f1;</i><a href="#" class="btn-link">腾讯</a></span>
+                    <span><i class="Hui-iconfont">&#xe6f1;</i><a href="#" class="btn-link">慕课网</a></span>
+                    <span><i class="Hui-iconfont">&#xe6f1;</i><a href="#" class="btn-link">h-ui</a></span>
+                </div>
+            </div>
+            <!--最近访客-->
+            <div class="bg-fff box-shadow radius mb-20">
+                <div class="tab-category">
+                    <a href=""><strong>最近访客</strong></a>
+                </div>
+                <div class="panel-body">
+                    <ul class="recent">
+                        <div class="item"><img src="/public/index/img/40.jpg" alt=""></div>
+                        <div class="item"><img src="/public/index/img/40.jpg" alt=""></div>
+                        <div class="item"><img src="/public/index/img/40.jpg" alt=""></div>
+                        <div class="item"><img src="/public/index/img/40.jpg" alt=""></div>
+                        <div class="item"><img src="/public/index/img/40.jpg" alt=""></div>
+                        <div class="item"><img src="/public/index/img/40.jpg" alt=""></div>
+                        <div class="item"><img src="/public/index/img/40.jpg" alt=""></div>
+                        <div class="item"><img src="/public/index/img/40.jpg" alt=""></div>
+                        <div class="item"><img src="/public/index/img/40.jpg" alt=""></div>
+                        <div class="item"><img src="/public/index/img/40.jpg" alt=""></div>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <footer class="footer mt-20">
+        <div class="container-fluid" id="foot">
+            <p>Copyright &copy; 2016-2017 www.actfou.com <br>
+                <a href="#" target="_blank">闽ICP备17002922号</a><br>
+            </p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/public/index/plugin/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/public/index/js/data.js"></script>
+    <script type="text/javascript" src="/public/index/plugin/layer/3.0/layer.js"></script>
+    <script type="text/javascript" src="/public/index/plugin/h-ui/js/H-ui.min.js"></script>
+    <script type="text/javascript" src="/public/index/plugin/pifu/pifu.js"></script>
+    <script type="text/javascript" src="/public/index/js/common.js"></script>
+
+    <script>
+        $(function () {
+            $(window).on("scroll", backToTopFun);
+            backToTopFun();
+        });
+    </script>
+    <script type="text/javascript" src="/public/index/plugin/jquery.SuperSlide/2.1.1/jquery.SuperSlide.min.js"></script>
+
+    <script>
+        $(function () {
+            //幻灯片
+            jQuery(".slider_main .slider").slide({
+                mainCell: ".bd ul",
+                titCell: ".hd li",
+                trigger: "mouseover",
+                effect: "leftLoop",
+                autoPlay: true,
+                delayTime: 700,
+                interTime: 2000,
+                pnLoop: true,
+                titOnClassName: "active"
+            })
+            //tips
+            jQuery(".slideTxtBox").slide({
+                titCell: ".hd ul",
+                mainCell: ".bd ul",
+                autoPage: true,
+                effect: "top",
+                autoPlay: true
+            });
+            // //标签
+            // $(".tags a").each(function () {
+            //     var x = 9;
+            //     var y = 0;
+            //     var rand = parseInt(Math.random() * (x - y + 1) + y);
+            //     $(this).addClass("tags" + rand)
+            // });
+
+            $("img.lazyload").lazyload({
+                failurelimit: 3
+            });
+        });
+    </script>
+
+</body>
+
+</html>
