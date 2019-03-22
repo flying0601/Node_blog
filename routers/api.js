@@ -317,7 +317,7 @@ router.post('/swiper/add',function (req,res) {
     resData.message = '内容保存成功';
     resData.url = '/admin/swiper';
     res.json(resData);
-    console.log(res.json(resData));
+    //console.log(res.json(resData));
   })
 })
 
