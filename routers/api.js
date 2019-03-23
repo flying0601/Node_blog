@@ -264,7 +264,7 @@ router.post('/setting',function (req,res) {
   Setting.findOne({
     name:'setting'
   }).then(function(setting){
-    console.log('setting',setting);
+    //console.log('setting',setting);
     resData.data = setting;
     res.json(resData);
   })

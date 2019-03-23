@@ -402,7 +402,7 @@ router.get('/content',function (req,res) {
     //sort排序1表示升序 -1表示降序
     //populate关联category的信息
     Content.find({},{photo:1,category:1,views:1,addTime:1,title:1,user:1}).sort({_id:-1}).limit(limit).skip(skip).populate(['category','user']).then(function(contents){
-      console.log('contents',contents);
+      //console.log('contents',contents);
       res.render('admin/content_index',{
         userInfo:req.userInfo,
         contents:contents,
