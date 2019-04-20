@@ -16,9 +16,9 @@ var User = require('./models/User')
 app.engine('html', swig.renderFile);//定义当前应用所使用的模板引擎，第一个参数：模板引擎名称，同时也是模板文件的后缀；第二个参数：解析处理模板内容的方法
 app.set('views', './views');//设置模板文件存放的目录,第一个参数必须是views，第二个参数是目录
 app.set('view engine', 'html')//注册模板，第一个参数：必须是view engine,第二个参数与定义模板引擎的第一个参数名称一致
-swig.setDefaults({ cache: false });//5第一次读取会把模板缓存到内存当中，下次会直接读取，因此即使改了模板内容刷新也不会有变化，需要在开发过程中需要取消模板缓存
-
+swig.setDefaults({ cache: false });//第一次读取会把模板缓存到内存当中，下次会直接读取，因此即使改了模板内容刷新也不会有变化，需要在开发过程中需要取消模板缓存
 ueditor_backend(app)
+
 //设置静态文件托管
 //托管规则：用户发送http请求到后端，后端解析url，找到匹配规则，执行绑定的函数，返回对应的内容，静态文件直接读取制定目录下文件返回给用户，动态文件：处理业务逻辑，加载模板，解析模板返回上数据
 app.use('/public',express.static(__dirname + '/public'));//当用户请求的路径ulr以/public开头时，以第二个参数的方式进行处理（直接返回__dirname + '/public'目录下文件）
@@ -51,13 +51,13 @@ app.use('/admin',require('./routers/admin'));
 app.use('/api',require('./routers/api'));
 app.use('/',require('./routers/main'));
 
-mongoose.connect('mongodb://localhost:27017/mycms',{useNewUrlParser:true},function (err) {
+mongoose.connect('mongodb://localhost:27017/nodeblog',{useNewUrlParser:true},function (err) {
   if (err) {
     console.log('数据库连接失败！');
   }else{
     console.log('数据库连接SUCCESS！');
     app.listen(8086);//监听http请求
-    console.log('开启8086端口！');
+    console.log('http://127.0.0.1:8086');
   }
 });
 
